@@ -1,0 +1,74 @@
+@media (max-width:768px) {
+            
+.ManageScreenB{
+    font-size: small;
+    font-family: AirBnbCereal,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header {
+    text-align: start;
+    margin: 20px;
+}
+.h1{
+    font-size:21px;
+    color: #595959;
+}
+#Monospace{
+  font-family:monospace;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block{
+    display: flex;
+    margin-left: 12px;
+    margin-right: 12px;
+    flex-direction: column;
+
+   
+}
+#content{
+    
+    font-size: 18px;
+    
+}
+#clickBtn{
+    background-color: #ffc43d;
+    color: white;
+    min-width: 80px;
+    margin-top:10px ;
+    font-family: AirBnbCereal;
+    min-height: 23px;
+    border-style: none;
+    border-radius: 14px;
+}
+
+#containertwo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    justify-content: flex-start;
+}
+.cardblock{
+    min-width:250px;
+    color: #595959;
+    margin-top: 40px;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 41px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    border-width: thin;
+    border-color:#595959 ;
+}
+}

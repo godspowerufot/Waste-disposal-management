@@ -1,0 +1,20 @@
+.OnboardingScreen{
+    background-color: #fb791b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color:white;
+    font-family:AirbnbCereal;
+}
+@font-face{
+    font-family:AirbnbCereal;
+    src: url("../stylesForOnboardingScreen/AirbnbCereal_W_XBd.otf");
+    }
+/* splashScreen.css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }

@@ -1,0 +1,108 @@
+@font-face{
+    font-family:AirbnbCereal;
+    src: url("../stylesForOnboardingScreen/AirbnbCereal_W_XBd.otf");
+    }
+
+    body{
+        font-family: AirbnbCereal;
+    }
+    .headerbox{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+    }
+    .headerTwo{
+        display: flex;
+        align-items: center;
+    }
+    .headersone{
+   color: #141414;
+   font-size: 24px;
+    }
+    p.textbox{
+        color:#595959;
+        color: #595959;
+    font-size: 14px;
+    margin-left: 36px;
+    }
+    .bodyBox{
+        padding-top:5%;    }
+        /* Add these styles to your CSS */
+/* Add these styles to your CSS */
+/* Add these styles to your CSS */
+.divDate{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+   min-width:300px ;
+}
+ .button {
+    
+    width: 50px;
+    display: flex;
+    font-size: 16px;
+    border-radius: 50%;
+    /* padding-inline: 38px; */
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+        border-color: #595959;
+        border-width: thin;
+        color: #595959;
+    flex-wrap: wrap;}
+    #buttons{
+        border-style: solid;
+        background-color: #ffa500;
+        border-color:none;
+        border-width: none;
+        color: white;
+
+    }
+  
+     input[type="time"]{
+        
+    width: 100px;
+    /* display: flex; */
+    height: 36px;
+    padding: 20px;
+    border-radius: 23px;
+    /* justify-content: center; */
+    /* align-items: center;*/
+    border-style: solid;
+    border-color: #595959;
+    border-width: thin;
+    margin-left: 18px;
+
+     }
+     
+     input[type="time"]:hover{
+        background-color: #ffa500;
+        color: #595959;
+        font-size: 16px;
+
+
+     }
+     label{
+        font-size: 13px;
+    color: #595959;
+     }
+     .timeInputContainer{
+        margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 23px;
+    justify-content: flex-start;
+    flex-direction: column;
+     }
+     .timeInput{
+        margin-top: 20px;
+     }
+     #friday{
+     }
+     .Time{
+        display: flex;
+
+     }
