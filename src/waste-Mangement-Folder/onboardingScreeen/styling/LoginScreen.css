@@ -1,0 +1,216 @@
+
+@font-face{
+    font-family: Sedan-Regular;
+    src: url("../assetsIcon/Sedan-Regular.woff");
+    }
+    /* CSS for Error Message */
+.error-alert {
+  background-color: #fb791b; /* Background color for the error message */
+  color: white; /* Text color for the error message */
+  padding: 10px 20px; /* Padding around the error message */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 10px; /* Space between the button and the error message */
+  text-align: center; /* Center-align text */
+  font-size: 14px; /* Font size */
+  font-weight: bold; /* Bold text */
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* LoginScreen.css */
+.LoginBody {
+  align-items: center;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    height: 100vh; /* Make sure the container takes up the full viewport height */
+  }
+  .spinnerLogin {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+ .link{
+  color: #595959;
+  font-family: Inter;
+  font-size: 10.471px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-top: 20px;
+ }
+ 
+.link a 
+{
+  color: #fb791b;
+  font-family: Inter;
+  font-size: 10.471px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#boxLogin {
+   
+  text-align: center;
+  padding-top: 20px;
+  width: 500px;
+  /* border-width: thin; */
+  /* border-style: solid; */
+  height: 555px;
+  border-style: tsol;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+  .icon:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);}
+  .TextHead {
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+ 
+  .smallText{
+    color: #7B7B7B;
+    font-family: Inter;
+    font-size: 13.991px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .TextHead
+  {
+    color: #595959;
+    font-family: Sedan;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .Icons, .icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8em;
+    align-items: center;
+    
+  }
+  .icon{
+    width: 61.087px;
+    height: 29.549px;
+    padding-inline: 2px;
+    flex-shrink: 0;
+    margin-inline: 10px;
+  }
+
+.btn:hover{
+
+
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+  }
+.stroke{
+ 
+    /* width: 86px; */
+    /* height: 0px; */
+    flex-shrink: 0;
+    margin-top: 39px;
+    display: flex;
+    color: #595959;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    margin-top: 43px;
+}
+
+.form-group {
+  position: relative;
+  margin-top: 48px;}
+.form-group input {
+    width: 300px;
+    height: 53px;
+    color: black;
+    border-color: #fb791b;
+    padding-left: 31px;
+    border-style: solid;
+    border-radius: 20px;
+    background: white;
+}
+#username{
+  
+    border-color: #fb791b;
+    padding-left: 39px;
+    background-image: url("/src/assets/images/vector.svg");
+    background-repeat: no-repeat; 
+    background-size: 37px 13px;
+    background-position: left center;
+  
+}
+#email{
+ 
+    border-color: #fb791b;
+    padding-left: 39px;
+    background-image: url("/src/assets/images/mdi-email.svg");
+    background-repeat: no-repeat;
+    background-size: 37px 13px;
+    background-position: left center;
+
+}
+#password{
+  border-color: #fb791b;
+  padding-left: 39px;
+  background-image: url("/src/assets/images/vector.svg");
+  background-repeat: no-repeat;
+  background-size: 37px 13px;
+  background-position: left center;
+}
+.btn {
+  border-radius: 20px;
+  background: #fb791b;
+  width: 300px;
+  height: 53px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: Inter;
+  font-size: 13px;
+  border-style: none;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 29px;
+  z-index: 3333;
+
+}
+
+
+@media (max-width: 768px){
+
+.strokeLength{
+    stroke-width: 1px;
+stroke: #595959;
+}
+.input{
+  width: 300px;
+  height: 53px;
+}
+#boxLogin{
+  border-style: none;
+}
+.btn{
+  border-style: none;
+}
+}
+

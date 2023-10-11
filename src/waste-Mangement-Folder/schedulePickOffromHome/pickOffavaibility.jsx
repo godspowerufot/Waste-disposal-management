@@ -1,0 +1,33 @@
+import React, { useEffect } from "react"
+import { Link } from "react-router-dom"
+function PickOff() {
+  return (
+    <>
+    <div className="headerTwo">
+          <Link>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="none"
+                stroke=" #fb791b"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="4"
+                d="M31 36L19 24l12-12"
+              />
+            </svg>
+          </Link>
+          <span className="headerbox">
+            <h1 className="headersone">Pickup off Availability</h1>
+          </span>
+        </div>
+      
+    </>
+  )
+}
+
+export default PickOff

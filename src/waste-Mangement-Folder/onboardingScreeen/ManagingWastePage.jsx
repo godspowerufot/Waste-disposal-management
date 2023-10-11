@@ -26,7 +26,7 @@ function MangeWasteScreen() {
       text: "Schedule pick up from your door step",
       icon:eBike2Fill,
 
-      link: "#About",
+      link: "pick",
       rotate:0
     },
 

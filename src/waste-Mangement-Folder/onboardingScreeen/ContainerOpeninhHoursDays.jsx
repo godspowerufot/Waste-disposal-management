@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Link,useHistory } from "react-router-dom";
+import { Link} from "react-router-dom";
+import { UserAuth } from "./contextApi";
+import BottomNavBar from "../reusablecomponent/BottomNavbar";
 import "../onboardingScreeen/stylesForOnboardingScreen/cardblocContainer.css";
 
 function ContainersOpenningHours() {
@@ -31,22 +33,21 @@ function ContainersOpenningHours() {
       text: "Su",
     },
   ];
-
-  const [openingHours, setOpeningHours] = useState({
-    Monday: "",
-    Tuesday: "",
-    Wednesday: "",
-    Thursday: "",
-    Friday: "",
-  });
-
+  const [location, setLocation] = useState("");
+  const handleLocationChange = (e) => {
+    setLocations(e.target.value);
+  };
+ 
+  const { openingHours, setOpeningHours } = UserAuth(); // Use the context hook
+  const { openingHourSecond, setOpeningHoursecond } = UserAuth(); // Use the context hook
+const {SelectInput,setLocations}=UserAuth()
   const handleTimeChange = (day, time) => {
     setOpeningHours({ ...openingHours, [day]: time });
   };
-  const handleSubmit = () => {
-    // Navigate to the next component and pass openingHours as a parameter
-    history.push("/next-component", { openingHours });
+  const handleTimeChanges= (day, time) => {
+    setOpeningHoursecond({ ...openingHourSecond, [day]: time });
   };
+ 
 
   return (
     <>
@@ -97,17 +98,34 @@ function ContainersOpenningHours() {
                   <input
                     type="time"
                     id={day + "2"} 
-                    value={openingHours[day]}
-                    onChange={(e) => handleTimeChange(day, e.target.value)}
+                    value={openingHourSecond[day]}
+                    onChange={(e) => handleTimeChanges(day, e.target.value)}
                   />
                 </div>
-                <button className="submit-button" onClick={handleSubmit}>
-            Submit
-          </button>
+               
               </div>
             ))}
+            <div className="selectLocation">
+            <p className="textboxes">Insert Location</p>
+
+         <input
+        type="text"
+        placeholder="Enter location"
+        value={SelectInput}
+        onChange={handleLocationChange}
+        className="location-input"
+      />
+      </div>
           </div>
+          <div id="Link">
+              <Link to="/SubmitContainerDetail" >
+      <button id="clickBtns">
+        Confirm  container
+        </button>  
+       </Link>
+       </div>
         </div>
+        <BottomNavBar/>
       </div>
     </>
   );

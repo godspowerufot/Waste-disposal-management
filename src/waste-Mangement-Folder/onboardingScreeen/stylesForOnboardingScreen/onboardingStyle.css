@@ -2,6 +2,7 @@
     background-color: #fb791b;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     min-height: 100vh;
     overflow: hidden;
@@ -17,4 +18,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  .boxbtn{
+    display: flex;
+  }
+  .boxbtn a {
+    text-decoration: none;
+  }
+  .btnuon{
+    background-color:white  !important;
+    color: #fb791b;
+    min-width: 135px;display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 14px;
+    min-height: 39px;
+    margin-top: 20px;
+    font-family: AirBnbCereal;
+    /* min-height: 23px; */
+    border-style: none;
+    border-radius: 14px;
   }
