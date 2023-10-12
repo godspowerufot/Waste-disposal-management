@@ -10,6 +10,9 @@ import PickOff from './waste-Mangement-Folder/schedulePickOffromHome/pickOffavai
 import MangeWasteScreen from './waste-Mangement-Folder/onboardingScreeen/ManagingWastePage';
 import AddImageContainer from './waste-Mangement-Folder/onboardingScreeen/addImageContainer';
 import SignUpScreen from './waste-Mangement-Folder/onboardingScreeen/AuthPage/signup';
+import AddHomeAdress from './waste-Mangement-Folder/schedulePickOffromHome/addAdress';
+import ComfirmationPageAddress from './waste-Mangement-Folder/schedulePickOffromHome/confirmationpick';
+import { DisplayAddImage } from './waste-Mangement-Folder/onboardingScreeen/seeContainerImage';
 function App() {
   return (
     <>
@@ -20,7 +23,10 @@ function App() {
    
       <Route path="/" element={<WelcomeScreen/>} />
       <Route path="/ManageWaste" element={<MangeWasteScreen/>} />
+      
       <Route path="/ManageWaste/pick" element={<PickOff/>} />
+      <Route path="/ManageWaste/pick/AddAddress/Addressconfirmed" element={<ComfirmationPageAddress/>} />
+      <Route path="/ManageWaste/pick/AddAddress" element={<AddHomeAdress/>} />
       <Route path="/login" element={<LoginScreen/>} />
       <Route path="/SignUp" element={<SignUpScreen/>} />
       <Route path="/ManageWaste/containers" element={<ContainersOpenningHours/>} />

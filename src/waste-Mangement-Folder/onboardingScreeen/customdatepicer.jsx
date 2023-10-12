@@ -63,7 +63,7 @@ function DisplayOpeningHours() {
       <div className="check">Check, container details before proceeding</div>
       <div className="Opening-Hours">
         <div className="timeOpen">
-          <h3>Open hours</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="currentColor" d="M256 48C141.13 48 48 141.13 48 256c0 114.69 93.32 208 208 208c114.86 0 208-93.14 208-208c0-114.69-93.31-208-208-208Zm108 240H244a4 4 0 0 1-4-4V116a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v140h92a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4Z"/></svg>  <h3>Open hours</h3>
         </div>
         <div className="Hours">
           {Object.entries(openingHours).map(([day, time]) => (
@@ -72,7 +72,7 @@ function DisplayOpeningHours() {
             </span>
           ))}-
           <div className="timeOpen">
-            <h3>Closing hours</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="currentColor" d="M256 48C141.13 48 48 141.13 48 256c0 114.69 93.32 208 208 208c114.86 0 208-93.14 208-208c0-114.69-93.31-208-208-208Zm108 240H244a4 4 0 0 1-4-4V116a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v140h92a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4Z"/></svg><h3>Closing hours</h3>
           </div>
           {Object.entries(openingHourSecond).map(([day, time]) => (
             <span key={day}>

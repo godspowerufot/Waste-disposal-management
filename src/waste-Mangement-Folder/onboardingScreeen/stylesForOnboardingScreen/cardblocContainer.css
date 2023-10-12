@@ -7,11 +7,70 @@
         width: 20px;
         height: 20px;
         border: 3px solid #f3f3f3;
-        border-top: 3px solid #3498db;
+        border-top: 3px solid #fb791b;
         border-radius: 50%;
         animation: spin 2s linear infinite;
       }
-      
+      /* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply the blur effect */  }
+  .displayLocation{
+    margin-top:20px;
+  }
+  .modal-content {
+    background-color: white; /* Orange color */
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #595959;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+  }
+  
+  .close {
+    color: #888;
+    /* font-size: 30px; */
+    left: 100px;
+    bottom: 20px;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  .show{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+      /* stylng container for added images */
+      #svg{
+        margin-right:53px;
+      }
+      .containerForImgae{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
       @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
@@ -155,7 +214,23 @@
         border-radius: 14px;
     }
    
-
+.buttonadd:hover{
+    background-color:white !important;
+    color: #fb791b;
+border-color: #fb791b;
+border-style: solid;
+}
+.buttonadd{
+    background-color: #fb791b !important;
+    color: white;
+    min-width: 235px;
+    min-height: 39px;
+    margin-top: 70px;
+    font-family: AirBnbCereal;
+    /* min-height: 23px; */
+    border-style: none;
+    border-radius: 14px;
+}
     
     #Link{
         margin-bottom: 50px;
@@ -192,8 +267,10 @@
     /* add Image Container */
     .textboxes{
         color: #595959;
-   margin-top: 20px;
-    font-size: 14px;
+        margin-top: 20px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        margin-left: 48px;
     }
     .divBox{
         width: 333px;
@@ -255,3 +332,47 @@
         border-radius: 14px;
 
     }
+
+    /* styling adding image box */
+    .image-upload-box {
+        width: 229px;
+        height: 200px;
+        border: 2px dashed #ffA500; /* Orange border */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px; /* Rounded corners */
+      }
+      
+      .add-image-label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      
+      .add-image-icon {
+        font-size: 24px;
+        color: #ffA500; /* Orange color for the icon */
+        transition: transform 0.2s;
+      }
+      
+      .add-image-label:hover .add-image-icon {
+        transform: scale(1.1); /* Zoom in on hover */
+      }
+      
+      .selected-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Maintain image aspect ratio */
+      }
+      
+      /* Add any additional styling you need for the "location-input" here */
+      

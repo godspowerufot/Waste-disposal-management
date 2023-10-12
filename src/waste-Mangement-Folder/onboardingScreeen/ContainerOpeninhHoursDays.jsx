@@ -114,11 +114,12 @@ const {SelectInput,setLocations}=UserAuth()
         value={SelectInput}
         onChange={handleLocationChange}
         className="location-input"
+        required
       />
       </div>
           </div>
           <div id="Link">
-              <Link to="/SubmitContainerDetail" >
+              <Link to="/AddImage" >
       <button id="clickBtns">
         Confirm  container
         </button>  

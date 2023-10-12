@@ -1,0 +1,114 @@
+/* Calendar container styles */
+.react-calendar {
+    border: none;
+    /* font-family: Arial, sans-serif; */
+    max-width: 300px;
+    font-size: 13px;
+    /* color: #595959; */
+    font-family: 'AirbnbCereal';
+    padding: 5px;
+    border-radius: 10px; /* Add a rounded border around the calendar */
+  }
+  
+  /* Calendar day styles */
+  .react-calendar__month-view__days__day {
+    border: none; /* Remove the border around each day */
+    border-radius: 42%; /* Make the date boxes round */
+  }
+  
+  /* Calendar day styles for selected date */
+  .react-calendar__month-view__days__day--active {
+    background-color: #ffc43d; /* Change background color for the selected date */
+  }
+  .calendar-container{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display:flex;
+  }
+  #h2{
+    font-size: 12px;
+    color: #595959;
+  }
+  
+ /* Time input container */
+#preferredTime {
+    width: 148px;
+    height: 40px;
+    border: none;
+    background-color:#ffc43d;
+    border-radius: 17px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    padding: 5px;
+  }
+  .btns{
+    border-radius: 20px;
+    background: #fb791b;
+    width: 300px;
+    height: 53px;
+    flex-shrink: 0;
+    color: #fff;
+    font-family: Inter;
+    font-size: 19px;
+    border-style: none;
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 29px;
+    z-index: 3333;
+  }
+  .selectPreferredTime{
+    margin-top: 29px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+  }
+ 
+  /* Remove default up and down arrows for time input */
+  #preferredTime::-webkit-inner-spin-button,
+  #preferredTime::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Style the input when focused */
+  #preferredTime:focus {
+    outline: none;
+    background-color: #ffc43d; /* Change background color on focus */
+  }
+  
+  /* Calendar navigation button styles on hover */
+  .react-calendar__navigation button:hover {
+    background-color: #ffc43d; /* Change background color on hover */
+  }
+  .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus{
+    background-color: #ffc43d; /* Change background color on hover */
+
+  }
+  .react-calendar__tile--now {
+    background-color: #ffc43d; /* Change background color on hover */
+}.react-calendar__navigation button {
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: #595959;
+    padding: 5px 10px;
+}
+.react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-style: none;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+.headerTwo{
+    margin-top: 26px !important;
+}
