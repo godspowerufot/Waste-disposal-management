@@ -1,5 +1,4 @@
-@media (max-width:768px) {
-    
+
 
 .BottomWrapper{
       /* margin-top: 100%; */
@@ -21,6 +20,7 @@
 
 }
 
+
 .IconsBottom{
     display: flex;
     justify-content: space-around;
@@ -29,4 +29,7 @@
     flex-direction: row;
     
 }
+.IconsBottom a{
+  color:black;
+    
 }

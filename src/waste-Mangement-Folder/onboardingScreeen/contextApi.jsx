@@ -22,9 +22,9 @@ export const AuthContext = createContext();
 // this is function is wrap around a context api to allow easy props handling
 function OpeningHoursProvider(props) {
   const [user, setUser] = useState({});
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [setImage, setSelectedImages] = useState(null);
 
- 
+ console.log(setImage)
   const [openingHours, setOpeningHours] = useState({
     Monday: "",
     Tuesday: "",
@@ -105,8 +105,8 @@ getRedirectResult(auth)
         setOpeningHours,
         SelectInput,
         setLocations,
-        selectedImage, // Include selectedImage
-        setSelectedImage, // Include setImage
+        setImage, // Include selectedImage
+        setSelectedImages, // Include setImage
         openingHourSecond,
         setOpeningHoursecond,
         user,

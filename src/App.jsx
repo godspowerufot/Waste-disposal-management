@@ -13,6 +13,8 @@ import SignUpScreen from './waste-Mangement-Folder/onboardingScreeen/AuthPage/si
 import AddHomeAdress from './waste-Mangement-Folder/schedulePickOffromHome/addAdress';
 import ComfirmationPageAddress from './waste-Mangement-Folder/schedulePickOffromHome/confirmationpick';
 import { DisplayAddImage } from './waste-Mangement-Folder/onboardingScreeen/seeContainerImage';
+import DisplayImageFromDatabase from './waste-Mangement-Folder/scheduleDropOff/schedule-off';
+import PageDropOff from './waste-Mangement-Folder/scheduleDropOff/scheduleComfirmationPage';
 function App() {
   return (
     <>
@@ -23,6 +25,8 @@ function App() {
    
       <Route path="/" element={<WelcomeScreen/>} />
       <Route path="/ManageWaste" element={<MangeWasteScreen/>} />
+      <Route path="/ManageWaste/DropOff" element={<DisplayImageFromDatabase/>} />
+      <Route path="/ManageWaste/DropOff/DropOffConfirmed" element={<PageDropOff/>} />
       
       <Route path="/ManageWaste/pick" element={<PickOff/>} />
       <Route path="/ManageWaste/pick/AddAddress/Addressconfirmed" element={<ComfirmationPageAddress/>} />

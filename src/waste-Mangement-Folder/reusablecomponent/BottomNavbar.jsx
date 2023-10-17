@@ -1,26 +1,26 @@
 import React, { useEffect } from "react"
 import { Icon } from '@iconify/react';
 import "./BottomStylingNavbar.css"
-import basket2 from '@iconify/icons-majesticons/basket-2';
-import eBike2Fill from '@iconify/icons-ri/e-bike-2-fill';
-import washHandsOutline from '@iconify/icons-healthicons/wash-hands-outline';
-
+import basket  from "../icon/recycle-bin.png"
+import eBike2Fill from '../icon/scooter-xxl.png';
+import washHandsOutline from '../icon/time-wasteblack.png';
+import { Link } from "react-router-dom";
 
 function BottomNavBar() {
     const itemList = [
         {
-          icon: basket2,
-          link:"",
+          icon: basket,
+          link:"/ManageWaste/containers",
         },
         {
           icon: washHandsOutline,
-          link:"",
+          link:"/ManageWaste/DropOff",
         },
     
         {
           icon:eBike2Fill,
     
-          link: "#About",
+          link: "/ManageWaste/pick",
         },
     
        
@@ -30,9 +30,13 @@ function BottomNavBar() {
       <div className="BottomWrapper">
         <div className="bottomSecondWrapper">
         {itemList.map((text, index) => ( 
+         
             <div className="IconsBottom" key={index}>
-<Icon icon={text.icon}  width="30" height="30" />   
-            </div>))}
+               <Link to={text.link}>
+               <img src= {text.icon} alt="" srcset="" width="25px" height="25px" />
+</Link>  
+            </div>
+           ))}
         </div>
       </div>
     </>

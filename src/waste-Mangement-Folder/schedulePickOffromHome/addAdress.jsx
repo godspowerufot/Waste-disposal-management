@@ -6,6 +6,8 @@ import {
   addDoc,
 } from "firebase/firestore";
 import { db } from "../../assets/contextAPI/firebasejsx";
+import BottomNavBar from "../reusablecomponent/BottomNavbar"
+
 function AddHomeAdress() {
  
     
@@ -116,6 +118,7 @@ function AddHomeAdress() {
           save address
         </button>)}
         </span>
+        <BottomNavBar/>
         </div>
     </>
   )

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react"
-import { Icon } from "@iconify/react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 import "../onboardingScreeen/stylesForOnboardingScreen/svg.css"
-import "../onboardingScreeen/stylesForOnboardingScreen/cardblocContainer.css"
-function ComfirmationPageAddress() {
+
+function PageDropOff() {
   return (
     <>
+     <>
       <div className="fullbodypage">
         <div className="iconsss">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" className="svg" viewBox="0 0 130.2 130.2">
@@ -20,7 +20,7 @@ function ComfirmationPageAddress() {
 
         <div className="wait">
 
-           pickup confirmed
+           Drop off registered 
       
         </div>
       
@@ -31,7 +31,9 @@ function ComfirmationPageAddress() {
         </Link>
       </div>
     </>
+      
+    </>
   )
 }
 
-export default ComfirmationPageAddress
+export default PageDropOff

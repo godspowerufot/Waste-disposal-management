@@ -120,6 +120,9 @@
     margin-left: 20px;
     margin-top: 20px;
     height: 50px;
+        box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+
+
     justify-content: center;
     align-items: center;
     border-style: solid;
@@ -164,12 +167,12 @@
     color: #595959;
      }
      .timeInputContainer{
-        margin-top: 40px;
-    display: flex;
-    align-items: flex-start;
-    margin-left: 23px;
-    justify-content: flex-start;
-    flex-direction: column;
+      margin-top: 40px;
+      display: flex;
+      align-items: flex-start;
+      margin-left: 11px;
+      justify-content: flex-start;
+      flex-direction: column;
      }
      .timeInput{
         margin-top: 20px;
@@ -181,20 +184,24 @@
      }
    /* btns styling */
      #clickBtns{
-        background-color: #fb791b !important;
-    color: white;
-    min-width: 235px;
-    min-height: 39px;
-    margin-top: 20px;
-    font-family: AirBnbCereal;
-    /* min-height: 23px; */
-    border-style: none;
-    border-radius: 14px;
+      background-color: #fb791b !important;
+      color: white;
+      min-width: 266px;
+      min-height: 39px;
+      margin-right: 5px;
+      margin-top: 20px;
+      box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+      font-family: AirBnbCereal;
+      /* min-height: 23px; */
+      border-style: none;
+      border-radius: 14px;
     }
      #clickBtnss{
         background-color: #fb791b !important;
     color: white;
     min-width: 235px;
+        box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+
     min-height: 39px;
     margin-top: 70px;
     font-family: AirBnbCereal;
@@ -210,6 +217,8 @@
         margin-top:10px ;
         font-family: AirBnbCereal;
         min-height: 23px;
+            box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+
         border-style: none;
         border-radius: 14px;
     }
@@ -229,6 +238,7 @@ border-style: solid;
     font-family: AirBnbCereal;
     /* min-height: 23px; */
     border-style: none;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
     border-radius: 14px;
 }
     
@@ -375,4 +385,6 @@ border-style: solid;
       }
       
       /* Add any additional styling you need for the "location-input" here */
-      
+
+  
+ 

@@ -1,5 +1,3 @@
-@media (max-width:768px) {
-            
 .ManageScreenB{
     font-size: small;
     font-family: AirBnbCereal,sans-serif;
@@ -8,10 +6,21 @@
     justify-content: center;
     flex-direction: column;
 }
+.special{
+    margin-right: 81px;
+}
 .header {
     text-align: start;
-    margin: 20px;
+    margin: 10px;
 }
+#icon{
+    margin-left:20px ;
+}
+.adjust{
+    margin-right: 76px !important;}
+/* animation.css */
+
+  
 .h1{
     font-size:21px;
     color: #595959;
@@ -33,7 +42,7 @@
 }
 #content{
     
-    font-size: 18px;
+    font-size: 12px;
     
 }
 #clickBtn{
@@ -48,27 +57,23 @@
 }
 
 #containertwo{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 6px;
+    margin-left: 9px;
+    margin-right: 7px;
+    margin-top: 63px;
     margin-bottom: 6px;
-    justify-content: flex-start;
 }
 .cardblock{
-    min-width:250px;
+    /* max-width: 365px; */
     color: #595959;
-    margin-top: 40px;
+    margin-top: 36px;
     border-style: solid;
     border-radius: 20px;
+    padding-top: 22px;
     padding-left: 41px;
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100px;
+    align-items: flex-start;
     border-width: thin;
-    border-color:#595959 ;
-}
+    height: 111px;
+    border-color: #595959;
 }

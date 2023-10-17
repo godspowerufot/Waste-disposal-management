@@ -40,6 +40,8 @@
     border-radius: 17px;
     text-align: center;
     font-size: 16px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+
     color: #fff;
     padding: 5px;
   }
@@ -47,6 +49,8 @@
     border-radius: 20px;
     background: #fb791b;
     width: 300px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+
     height: 53px;
     flex-shrink: 0;
     color: #fff;
