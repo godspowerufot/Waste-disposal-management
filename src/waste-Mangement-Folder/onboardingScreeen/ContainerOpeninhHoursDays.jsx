@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link} from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 import { UserAuth } from "./contextApi";
 import BottomNavBar from "../reusablecomponent/BottomNavbar";
 import "../onboardingScreeen/stylesForOnboardingScreen/cardblocContainer.css";
@@ -48,12 +48,13 @@ const {SelectInput,setLocations}=UserAuth()
     setOpeningHoursecond({ ...openingHourSecond, [day]: time });
   };
  
+  let navigate=useNavigate()
 
   return (
     <>
       <div className="containerBox">
         <div className="headerTwo">
-          <Link>
+          <Link onClick={() => navigate(-1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"

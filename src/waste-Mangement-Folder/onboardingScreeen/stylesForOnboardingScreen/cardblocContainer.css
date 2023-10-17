@@ -356,18 +356,7 @@ border-style: solid;
         border-radius: 10px; /* Rounded corners */
       }
       
-      .add-image-label {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
-      
+    
       .add-image-icon {
         font-size: 24px;
         color: #ffA500; /* Orange color for the icon */
@@ -387,4 +376,18 @@ border-style: solid;
       /* Add any additional styling you need for the "location-input" here */
 
   
- 
+     
+        .add-image-label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          font-size: 24px; /* Adjust the font size as needed */
+        }
+        
+        input[type="file"] {
+          display: none; /* Hide the file input */
+        }
+      
+      

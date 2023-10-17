@@ -14,7 +14,6 @@ function DisplayImageFromDatabase() {
     const [error, setError] = useState(null);
 const {setImage}=UserAuth()
     const { user } = UserAuth();
-
     useEffect(() => {
         const fetchImage = async () => {
             if (user?.email) {
@@ -47,11 +46,13 @@ const {setImage}=UserAuth()
     const handleDateChange = (newDate) => {
         setDate(newDate);
     };
+    let navigate=useNavigate()
 
     return (
         <div>
             <div className="headerTwo">
-                <Link>
+                <Link     onClick={() => navigate(-1)}
+>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="48"
@@ -78,12 +79,11 @@ const {setImage}=UserAuth()
                 </p>
             </div>
             <div className="containerForImgae">
-                <div className="image-upload-box" style={{ minWidth: "279px" }}>
-                    <label className="add-image-label" htmlFor="image-upload">
+                <div className="image-upload-box" style={{ minWidth: "259px",marginLeft:"22px" }}>
+                    <label className="add-image-label" htmlFor="image-upload" style={{ minWidth: "221px",marginRight:"50px" }} >
                         
                             <div>
-                                <h2>Image from Database</h2>
-                                <img src={setImage} alt="Database Image" />
+                                <img src={setImage} alt="Database Image" width="100%" height="100%"/>
                             </div>
                   
                     

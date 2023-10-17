@@ -52,7 +52,8 @@ function AddHomeAdress() {
     <>
     <div className="HomeAdressBox">
         <div className="headerTwo">
-          <Link>
+          <Link     onClick={() => navigate(-1)}
+>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"
