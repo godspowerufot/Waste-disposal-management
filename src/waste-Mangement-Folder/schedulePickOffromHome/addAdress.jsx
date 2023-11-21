@@ -5,12 +5,15 @@ import {
   collection,
   addDoc,
 } from "firebase/firestore";
+import { UserAuth } from "../onboardingScreeen/contextApi"
+
 import { db } from "../../assets/contextAPI/firebasejsx";
 import BottomNavBar from "../reusablecomponent/BottomNavbar"
 
 function AddHomeAdress() {
  
-    
+  const {WastoCoinss,SetWastocoinss}=UserAuth()
+
   const [isLoading, setIsLoading] = useState(false);
   const navigate=useNavigate() 
    const [form, setform] = useState({
@@ -35,11 +38,18 @@ function AddHomeAdress() {
         const messageRef = collection(db, "location");
         await addDoc(messageRef, {
           House: House,
-          Street:Street
+          Street:Street,
+    count: WastoCoinss + 1,
+
+
         });
+       
+
       } catch (error) {
         console.error('Error storing location:', error);
       }
+      const newLocal = WastoCoinss + 1;
+      SetWastocoinss(newLocal);
     };
       
      function handlechange(event) {

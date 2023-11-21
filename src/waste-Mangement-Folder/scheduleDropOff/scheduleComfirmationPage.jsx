@@ -1,8 +1,15 @@
 import React, { useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import "../onboardingScreeen/stylesForOnboardingScreen/svg.css"
-
+import { UserAuth } from "../onboardingScreeen/contextApi";
 function PageDropOff() {
+  const currentCoins = parseInt(localStorage.getItem("schedulewastoCoins")) || 0;
+
+  useEffect(() => {
+    // Increment the coin and update local storage
+    const storedSchedulecoin= currentCoins + 1;
+    localStorage.setItem("schedulewastoCoins", storedSchedulecoin.toString());
+  }, []); 
   return (
     <>
      <>
@@ -24,7 +31,7 @@ function PageDropOff() {
       
         </div>
       
-<Link to="/ManageWaste">
+<Link to="/ManageWaste" >
         <button id="clickBtness">
             Return to Home
         </button>

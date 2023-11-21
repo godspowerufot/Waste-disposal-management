@@ -23,8 +23,12 @@ export const AuthContext = createContext();
 function OpeningHoursProvider(props) {
   const [user, setUser] = useState({});
   const [setImage, setSelectedImages] = useState(null);
-
- console.log(setImage)
+  const [WastoCoin,SetWastocoin]=useState(0)
+  const [WastoCoins,SetWastocoins]=useState(0)
+  const [WastoCoinss,SetWastocoinss]=useState(0)
+  function Setcoin(){
+    SetWastocoin( (p)=>   p+1)
+  }
   const [openingHours, setOpeningHours] = useState({
     Monday: "",
     Tuesday: "",
@@ -105,6 +109,9 @@ getRedirectResult(auth)
         setOpeningHours,
         SelectInput,
         setLocations,
+        WastoCoinss,SetWastocoinss,
+        WastoCoins,SetWastocoins,
+        WastoCoin,Setcoin,
         setImage, // Include selectedImage
         setSelectedImages, // Include setImage
         openingHourSecond,

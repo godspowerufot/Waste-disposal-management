@@ -1,9 +1,29 @@
-import React, { useEffect } from "react"
+import React, { useState,useEffect } from "react"
 import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { UserAuth } from "../onboardingScreeen/contextApi"
 import "../onboardingScreeen/stylesForOnboardingScreen/svg.css"
 import "../onboardingScreeen/stylesForOnboardingScreen/cardblocContainer.css"
 function ComfirmationPageAddress() {
+  const currentCoins = parseInt(localStorage.getItem("wastoCoins")) || 0;
+
+  useEffect(() => {
+    // Increment the coin and update local storage
+    const storedWastoCoins= currentCoins + 1;
+    localStorage.setItem("wastoCoins", storedWastoCoins.toString());
+  }, []); 
+  const StoreLocationforthecontainer=async()=>{
+    try{
+      const Pointref=collection(db,"POINT");
+      await addDoc(Pointref,{
+        Storedwastocoin:storedWastoCoins
+      })
+    }
+    catch(error){
+      console.log("alert ", error)
+    }
+  }
   return (
     <>
       <div className="fullbodypage">
@@ -24,8 +44,8 @@ function ComfirmationPageAddress() {
       
         </div>
       
-<Link to="/ManageWaste">
-        <button id="clickBtness">
+<Link to="/ManageWaste" >
+        <button id="clickBtness" >
             Return to Home
         </button>
         </Link>

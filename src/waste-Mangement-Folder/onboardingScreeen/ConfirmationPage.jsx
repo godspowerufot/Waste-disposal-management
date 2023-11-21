@@ -1,9 +1,17 @@
 import React, { useEffect } from "react"
 import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom"
+import { UserAuth } from "./contextApi"
 import "../onboardingScreeen/stylesForOnboardingScreen/svg.css"
 import "../onboardingScreeen/stylesForOnboardingScreen/cardblocContainer.css"
 function ComfirmationPage() {
+  const currentCoins = parseInt(localStorage.getItem("disposeCoins")) || 0;
+
+  useEffect(() => {
+    // Increment the coin and update local storage
+    const storedisposecoin= currentCoins + 1;
+    localStorage.setItem("disposeCoins", storedisposecoin.toString());
+  }, []); 
   return (
     <>
       <div className="fullbodypage">
@@ -27,7 +35,7 @@ function ComfirmationPage() {
       
         </div>
       
-<Link to="/ManageWaste">
+<Link to="/ManageWaste"  > 
         <button id="clickBtness">
             Return to Home
         </button>
