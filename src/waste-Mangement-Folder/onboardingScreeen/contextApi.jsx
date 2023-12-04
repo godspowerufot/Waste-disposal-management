@@ -48,10 +48,7 @@ function OpeningHoursProvider(props) {
   //  get th user that is sign in as object
 
   function signUp(email, password) {
-     setDoc(doc(db, "users", email), {
-       //addingnd users and his email in firebase
-       savedShows: [],
-     });
+   
     return createUserWithEmailAndPassword(auth, email, password);
     // firebase function to  create a email and password by using an abstraction as baas
   }

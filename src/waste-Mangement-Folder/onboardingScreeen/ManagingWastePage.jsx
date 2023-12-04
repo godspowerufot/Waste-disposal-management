@@ -113,10 +113,11 @@ Coin:storedSchedulecoin
                       {text.text}
                     </p>
                     <div style={{display:'flex'}}>
-                  <p><img src={text.coinicon} alt='animated' srcset="" width='20px' height ='20px' /></p>  <p style={{color:"#fb971b"}}> {text.Coin}</p> </div> 
-                 <Link to={text.link}>
+                      <div style={{ display:"flex",paddingTop:"8px"}}>
+                  <p> <img src={text.coinicon} alt='animated' srcset="" width='20px' height ='20px'  /></p>  <p style={{color:"#fb971b"}}> {text.Coin}</p>   </div> <Link to={text.link}>
                       <button id="clickBtn">create</button>
-                    </Link>
+                    </Link> </div> 
+              
                   </span>
                 </div>
             ))}

@@ -5,31 +5,53 @@ import {
   collection,
   addDoc,
 } from "firebase/firestore";
+
 import { db } from "../../assets/contextAPI/firebasejsx";
 import "../onboardingScreeen/stylesForOnboardingScreen/cardblocContainer.css";
 
 function DisplayOpeningHours() {
-  const { openingHours, openingHourSecond, SelectInput } = UserAuth(); // Use the context hook
+  const {user, openingHours, openingHourSecond, SelectInput } = UserAuth(); // Use the context hook
 
   const [isLoading, setIsLoading] = useState(false);
   const navigate=useNavigate()
+
+
   const handleVerification = async () => {
     setIsLoading(true);
 
-    // Store the location in the database
-    await storeLocationData(SelectInput);
+    try {
+      // Get the current location using the Geolocation API
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
 
-    setIsLoading(false);
+          // Store the location in the database with the user's email as the document ID
+          await storeLocationData(SelectInput, user?.email, latitude, longitude);
 
-    // Navigate to the confirmation page
-    navigate('/confirmation');
+          setIsLoading(false);
+
+          // Navigate to the confirmation page
+          navigate('/confirmation');
+        },
+        (error) => {
+          console.error('Error getting location:', error);
+          setIsLoading(false);
+        }
+      );
+    } catch (error) {
+      console.error('Error verifying container:', error);
+      setIsLoading(false);
+    }
   };
 
-  const storeLocationData = async (location) => {
+  const storeLocationData = async (location, userEmail, latitude, longitude) => {
     try {
-      const messageRef = collection(db, "location");
-      await addDoc(messageRef, {
-        location: location,
+      const locationsCollection = collection(db, 'locations'); // Change 'locations' to your desired collection name
+      const locationDocRef = await addDoc(locationsCollection, {
+        DustBinLocation: location,
+        userEmail: userEmail,
+        latitude: latitude,
+        longitude: longitude,
       });
     } catch (error) {
       console.error('Error storing location:', error);

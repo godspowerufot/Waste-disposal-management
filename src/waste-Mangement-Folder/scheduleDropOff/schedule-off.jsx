@@ -91,9 +91,9 @@ const {setImage}=UserAuth()
                 </div>
                 <div className="calendar-container">
                     <Calendar onChange={handleDateChange} value={date} />
-                    <Link to="DropOffConfirmed">
+                    <Link to="/ManageWaste/DropOff/Location">
                         <button id="clickBtness" style={{ marginBottom: "5rem" }}>
-                            Confirm Time slot
+                         SEE AVAILABLE LOCATION
                         </button>
                     </Link>
                 </div>

@@ -45,14 +45,15 @@
     font-size: 12px;
     
 }
-#clickBtn{
+#clickBtn {
     background-color: #ffc43d;
     color: white;
-    min-width: 80px;
-    margin-top:10px ;
+    min-width: 61px;
+    margin-top: 10px;
     font-family: AirBnbCereal;
     min-height: 23px;
     border-style: none;
+    margin-left: 8px;
     border-radius: 14px;
 }
 
